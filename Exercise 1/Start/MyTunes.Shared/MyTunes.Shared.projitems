@@ -9,5 +9,7 @@
     <Import_RootNamespace>MyTunes.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Song.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SongLoader.cs" />
   </ItemGroup>
 </Project>
