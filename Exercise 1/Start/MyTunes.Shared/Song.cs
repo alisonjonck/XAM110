@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MyTunes
+﻿namespace MyTunes
 {
 	public class Song
 	{

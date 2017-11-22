@@ -1,9 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-using Newtonsoft.Json;
 using System.IO;
 using System.Threading.Tasks;
-using System.Reflection;
 
 namespace MyTunes
 {
@@ -13,7 +11,8 @@ namespace MyTunes
 
 		public static async Task<IEnumerable<Song>> Load()
 		{
-			using (var reader = new StreamReader(OpenData())) {
+			using (var reader = new StreamReader(OpenData()))
+			{
 				return JsonConvert.DeserializeObject<List<Song>>(await reader.ReadToEndAsync());
 			}
 		}
